@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS test</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            background: #202731;
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .orange {
+            background: #FA7268;
+        }
+
+        .blue {
+            background: #3434ff;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+        }
+
+        .curve::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3434ff;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url('./layer1.svg');
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue">
+        <h1>Nice Curbs</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab sed laborum rerum nesciunt temporibus, ea nam
+            obcaecati. Error ad obcaecati ipsum dolores placeat ullam quasi eaque corrupti nesciunt, sed unde!</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>Nice Curbs</h1>
+        <p>Sed error odio omnis nam explicabo ad et, debitis non a saepe voluptate quos quod cumque dolore modi rerum
+            iste unde animi necessitatibus nesciunt vero earum fugit ut impedit! Natus?</p>
+    </section>
+    <div class="spacer layer1"></div>
+    <section class="orange">
+        <h1>Nice Curbs</h1>
+        <p>Earum corporis soluta sunt qui nam. Dolore iure culpa quam repudiandae sapiente ipsum. Temporibus neque magni
+            nobis, inventore sapiente quam in harum iusto repellendus odit quae beatae provident velit architecto.</p>
+
+    </section>
+    <div class="spacer layer1 flip"></div>
+    <section>
+        <h1>Nice Curbs</h1>
+        <p>Repellendus amet nostrum quae officia tenetur laborum perferendis dolores exercitationem ut delectus et,
+            voluptatum ipsum autem eaque voluptas modi voluptate atque commodi esse iure, dolorum unde molestias non?
+            Quam, nesciunt.</p>
+    </section>
+</body>
+
+</html>
